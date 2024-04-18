@@ -1,0 +1,29 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Discover the future of technology with our Artificial Intelligence blog. We explore the latest trends in A.I., including deep learning and neural networks, discuss their impact on society, and analyze practical and ethical challenges. Join us on this journey towards a smarter and more innovative future through Artificial Intelligence." />
+                <meta name="author" content="Máximo Silva">
+                <meta name="robots" content="index, follow">
+                <meta name="keywords" content='Artificial Intelligence, future of AI, general AI, deep learning, Machine learning, Robotics, AI, trends of Artificial Intelligence'>
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+</style>
